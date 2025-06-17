@@ -2,7 +2,7 @@ package handlers
 
 import (
 	"net/http"
-	"het/http/httptest"
+	"net/http/httptest"
 	"testing"
 )
 func BenchmarkGetPosts(b *testing.B) {
