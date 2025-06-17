@@ -1,0 +1,2 @@
+FAIL	github.com/KingBean4903/GoProfiling/handlers [setup failed]
+FAIL

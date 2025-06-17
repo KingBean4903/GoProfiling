@@ -3,8 +3,8 @@ package main
 import (
 	"log"
 	"net/http"
-	"github.com/KingBean4903/router"
-	"github.com/KingBean4903/profiling"
+	"github.com/KingBean4903/GoProfiling/router"
+	"github.com/KingBean4903/GoProfiling/profiling"
 )
 
 func main() {

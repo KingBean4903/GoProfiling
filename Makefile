@@ -16,3 +16,10 @@ profile-cpu:
 profile-mem:
 	curl -o mem.pprof http://localhost:6060/debug/pprof/heap
 	go tool pprof -http=:7070 api-server mem.pprof
+
+benchmark:
+	go test -bench=. -benchmem ./handlers > benchtest.txt
+	@echo "Benchmark resutls savet to bench_latest.txt"
+
+benchmark-compare:
+	benchstat bench_old.txt bench_latest.txt

@@ -17,9 +17,9 @@ var (
 func GetAllPosts() []Post {
 	mu.RLock()
 	defer mu.RUnlock()
-	result := make([]post, 0, len(posts))
+	result := make([]Post, 0, len(posts))
 	for _, post := range posts {
-			results = append(result, post)
+			result = append(result, post)
 	}
 	 return result
 }
