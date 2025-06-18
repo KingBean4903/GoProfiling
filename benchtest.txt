@@ -1,2 +1,7 @@
-FAIL	github.com/KingBean4903/GoProfiling/handlers [setup failed]
-FAIL
+goos: linux
+goarch: amd64
+pkg: github.com/KingBean4903/GoProfiling/handlers
+cpu: Intel(R) Core(TM) i7-6600U CPU @ 2.60GHz
+BenchmarkGetPosts-4   	 6045128	       224.7 ns/op	      35 B/op	       1 allocs/op
+PASS
+ok  	github.com/KingBean4903/GoProfiling/handlers	1.573s

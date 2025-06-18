@@ -3,9 +3,10 @@ package router
 import (
 	"github.com/gorilla/mux"
 	"github.com/KingBean4903/GoProfiling/handlers"
+	"net/http"
 )
 
-func Setup() *mux.Router {
+func Router() http.Handler {
 
 		r := mux.NewRouter()
 
@@ -14,6 +15,10 @@ func Setup() *mux.Router {
 		r.HandleFunc("/posts", handlers.CreatePost).Methods("POST")
 		r.HandleFunc("/posts/{id}", handlers.UpdatePost).Methods("PUT")
 		r.HandleFunc("/posts/{id}", handlers.DeletePost).Methods("DELETE")
+
+
+		r.HandleFunc("/healthz", handlers.Healthz).Methods("GET")
+		r.HandleFunc("/ready", handlers.Readyz).Methods("GET")
 
 		return r
 }
